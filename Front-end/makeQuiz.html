@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question List</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/makeQuiz.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <script src="./js/makeQuiz.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Quiz Home Page</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+         
+              <a class="nav-link" href="register.html">Register</a>
+              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link" href="admin.html">Admin</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="me-auto p-2 bd-highlight">
+                <h2>Edit the Quiz
+            </div>
+            <div class="p-2 bd-highlight">
+                <button type="button" class="btn btn-primary" onclick="showCreateBox()">Add New Question</button>
+                <button id="deleteAllButton" type="button" class="btn btn-danger float-right ml-2" onclick="deleteAll()">
+                    Delete All
+                </button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Ques No.</th>
+                        <th scope="col">Quiz Question</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                    <tr>
+                        <th scope="row" colspan="5">Loading...</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/makeQuiz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- Optional JavaScript for Bootstrap -->
+<!-- <script
+                src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"
+            ></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"
+            ></script>
+            <script
+                src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                crossorigin="anonymous"
+            ></script>
+    
+            <script src="./js/makeQuiz.js"></script>
+        </head>
+        <body>
+            <div id="bodyContainer">
+                <h1 id="title">Questions</h1>
+                <div id="buttonContainer">
+                    <button
+                        id="deleteAllButton"
+                        type="button"
+                        class="btn btn-danger float-right ml-2"
+                    >
+                        Delete All
+                    </button>
+                    <button
+                        id="addButton"
+                        type="button"
+                        class="btn btn-info float-right mb-2"
+                        data-toggle="modal"
+                        data-target="#Modal"
+                    >
+                        Add New Question
+                    </button>
+                </div>
+                <div class="list-group"></div>
+                <div class="actionButton" id="returnButton">
+                    <span>
+                        <a href="playQuiz.html">
+                            Main Menu
+                        </a></span
+                    >
+                </div>
+            </div>
+            <div
+                class="modal fade"
+                id="Modal"
+                tabindex="-1"
+                aria-labelledby="ModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">
+                                Edit Question
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label
+                                        for="quiz-question"
+                                        class="col-form-label"
+                                        >Quiz Question:</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="question"
+                                    ></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="option-1" class="col-form-label"
+                                        >Option 1:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="option1"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="option-2" class="col-form-label"
+                                        >Option 2:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="option2"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="option-3" class="col-form-label"
+                                        >Option 3:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="option3"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="option-4" class="col-form-label"
+                                        >Option 4:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="option4"
+                                    />
+                                </div>
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <legend
+                                            class="col-form-label col-sm-2 pt-0"
+                                        >
+                                            Answer
+                                        </legend>
+                                        <div class="col-sm-10">
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadio1"
+                                                    value="1"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadio1"
+                                                    >1</label
+                                                >
+                                            </div>
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadio2"
+                                                    value="2"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadio2"
+                                                    >2</label
+                                                >
+                                            </div>
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadio3"
+                                                    value="3"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadio3"
+                                                    >3</label
+                                                >
+                                            </div>
+                                            <div
+                                                class="form-check form-check-inline"
+                                            >
+                                                <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="inlineRadioOptions"
+                                                    id="inlineRadio4"
+                                                    value="4"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="inlineRadio4"
+                                                    >4</label
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button
+                                id="modalDeleteButton"
+                                type="button"
+                                class="btn btn-danger"
+                            >
+                                Delete
+                            </button>
+                            <button
+                                id="modalSubmitButton"
+                                type="button"
+                                class="btn btn-primary"
+                            >
+                                Apply Changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html> --> -->

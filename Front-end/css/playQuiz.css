@@ -1,0 +1,152 @@
+#bodyContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#question {
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+}
+
+#answerListContainer {
+    width: 800px;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-auto-rows: 100px 100px 100px 100px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.answerItem {
+    width: 600px;
+    height: 49px;
+    background: #fffbfb;
+    border: 3px solid #ADD8E6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-left: 13px;
+    justify-self: center;
+}
+
+.answerItem span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 49px;
+    text-align: left;
+
+    color: black;
+}
+
+.answerItem:hover {
+    background-color: #ADD8E6;
+    cursor: pointer;
+}
+
+.answerItem:hover span {
+    color: white;
+}
+
+.wrongContainer {
+    background-color:red;
+}
+
+.correctContainer {
+    background-color:green;
+}
+
+.hideButton {
+    visibility: hidden;
+}
+
+#endButton {
+    float: right;
+}
+#backButton {
+    float:right,
+}
+
+#endButton span {
+    font-size: 20px;
+}
+
+#nextButton span {
+    font-size: 25px;
+}
+#backButton span {
+    font-size: 20px;
+}
+
+#nextButton,
+#endButton,#backButton {
+    width: 200px;
+    height: 49px;
+
+    background: #fffbfb;
+    border: 2px solid #ADD8E6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#nextButton span,
+#endButton span, #backButton span{
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 49px;
+    text-align: center;
+
+    color: #2f7492;
+}
+
+#infoContainer {
+    position: absolute;
+    left: 45px;
+    top: 85px;
+}
+
+#infoContainer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: right;
+
+    color:white;
+}
+
+#infoContainer p span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: right;
+
+    color:white;
+}
+
+#nextButton:hover,
+#endButton:hover,#backButton:hover {
+    background-color: #ADD8E6;
+    cursor: pointer;
+}
+
+#nextButton:hover span,
+#endButton:hover span,#backButton:hover span {
+    color: white;
+}

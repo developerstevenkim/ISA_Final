@@ -1,0 +1,81 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "This is a sample server for quiz game.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+      "version": "1.0.0",
+      "title": "Swagger Quiz API",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+        "email": "apiteam@swagger.io"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    },
+    "host": "https://lab5.live/Quiz/",
+    "basePath": "/API/V1",
+    "tags": [{
+      "name": "Quiz API",
+      "description": "Everything about quiz API",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    }],
+    "schemes": [
+      "https",
+      "http"
+    ],
+    "paths": {
+  
+      "/computing": {
+        "get": {
+          "tags": [
+            "Computing Quiz"
+          ],
+          "summary": "get computing questions ",
+          "description": "Questions related to computing with their options and answers",
+          "operationId": "computing",
+          "produces": [
+            "application/json"
+          ],
+  
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid question "
+            }
+          }
+        }
+      },
+      "/personal": {
+        "get": {
+          "tags": [
+            "Personal Quiz"
+          ],
+          "summary": "Get personal questions",
+          "description": "Personal questions with their options and answers",
+          "operationId": "question",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      }
+    }
+  
+  }

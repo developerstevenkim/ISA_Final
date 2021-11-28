@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Question</title>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/playQuiz.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/playQuiz.js"></script>
+    </head>
+    <body>
+        <div id="bodyContainer">
+            <div id="infoContainer">
+                <p>Question <span id="questionProgress">0 / 10</span></p>
+                <p>Mark: <span id="mark"> 0</span></p>
+                <div id="endButton">
+                    <span>End Quiz</span>
+                </div><br> <br> <br> <br>
+                <div id="backButton">
+                    <span><a href="index.html">Go Back</a></span>
+                </div>
+            </div>
+            <div id="questionContainer">
+                <p id="question">
+                    Q: How many provinces are there in Canada?
+                </p>
+            </div>
+            <div id="answerListContainer"></div>
+            <div id="nextButtonContainer">
+                <div id="nextButton" class="hideButton">
+                    <span> Next</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
