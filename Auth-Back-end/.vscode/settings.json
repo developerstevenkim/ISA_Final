@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/1b6b625d-3c8c-444c-a632-e528f57931eb/resourceGroups/isaproject/providers/Microsoft.Web/sites/isaprojectauth",
-    "appService.deploySubpath": "."
-}
