@@ -1,41 +1,35 @@
 #bodyContainer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 15px;
+}
+
+#nextButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #question {
     font-family:Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 35px;
     text-align: center;
     color: white;
-}
-
-#answerListContainer {
-    width: 800px;
-    display: grid;
-    grid-template-columns: 100px;
-    grid-auto-rows: 100px 100px 100px 100px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+    margin-top: 30px;
 }
 
 .answerItem {
-    width: 600px;
+    display: block;
     height: 49px;
     background: #fffbfb;
     border: 3px solid #ADD8E6;
     border-radius: 10px;
     box-sizing: border-box;
     padding-left: 13px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     justify-self: center;
 }
 
@@ -71,13 +65,6 @@
     visibility: hidden;
 }
 
-#endButton {
-    float: right;
-}
-#backButton {
-    float:right,
-}
-
 #endButton span {
     font-size: 20px;
 }
@@ -91,14 +78,24 @@
 
 #nextButton,
 #endButton,#backButton {
-    width: 200px;
+    width: 150px;
     height: 49px;
-
     background: #fffbfb;
     border: 2px solid #ADD8E6;
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
+    align-items: center;
+}
+
+#endButton,#backButton {
+    margin: auto;
+    display: block;
+}
+
+#spacebetween {
+    display: flex;
+    justify-content:space-around; 
 }
 
 #nextButton span,
@@ -108,14 +105,14 @@
     font-weight: normal;
     line-height: 49px;
     text-align: center;
-
     color: #2f7492;
 }
 
 #infoContainer {
-    position: absolute;
-    left: 45px;
-    top: 85px;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #infoContainer p {

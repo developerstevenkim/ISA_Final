@@ -1,5 +1,5 @@
 const xhttp = new XMLHttpRequest();
-const endPointRoot = 'https://lab5.live/Quiz/API/V1/';
+const endPointRoot = 'https://prernadohun.com/';
 const resource="adminLogin";
 const verifyResource = "admins/verify";
 

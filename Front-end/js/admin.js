@@ -1,4 +1,4 @@
-const endPointRoot = 'https://lab5.live/Quiz/API/V1/';
+const endPointRoot = 'https://prernadohun.com/';
 const resource="admins/stats";
 const message = "There is no Admin stat data";
 

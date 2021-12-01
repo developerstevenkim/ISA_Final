@@ -1,13 +1,19 @@
 const mysql = require('mysql');
 
 //Create connection to db
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "msvaolcz_anmolS",
+//   password: "Mysqldatabase123",
+//   database: "msvaolcz_aDatabase"
+// });
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "msvaolcz_anmolS",
-    password: "Mysqldatabase123",
-    database: "msvaolcz_aDatabase",
-    multipleStatements: true,
+  host: "localhost",
+  user: "prerkntw_lab5",
+  password: "isaproject123",
+  database: "prerkntw_lab5"
 });
+
 
 db.connect((err) => {
     if (err) throw err;

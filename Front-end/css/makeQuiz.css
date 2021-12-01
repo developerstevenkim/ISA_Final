@@ -14,62 +14,6 @@ tr {
 .btn-success {
     margin-right: 10px;
 }
-/* #bodyContainer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#back span {
+    color:white,
 }
-
-.list-group {
-    width: 50%;
-    max-height: 60%;
-   
-}
-
-#buttonContainer {
-    width: 50%;
-}
-
-#title {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 70px;
-
-    color: #469bbf;
-}
-
-.actionButton {
-    width: 209px;
-    height: 89px;
-    margin-top: 30px;
-
-    background: #fffbfb;
-    border: 2px solid #2f7492;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.actionButton span {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 89px;
-    text-align: center;
-
-    color: #2f7492;
-}
-
-.actionButton:hover {
-    background-color: #2f7492;
-    cursor: pointer;
-}
-
-.actionButton:hover span {
-    color: white;
-} */

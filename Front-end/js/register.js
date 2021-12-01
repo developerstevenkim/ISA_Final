@@ -1,5 +1,5 @@
 const resource="register";
-const endPointRoot = 'https://lab5.live/Quiz/API/V1/';
+const endPointRoot = 'https://prernadohun.com/';
 
 const username = document.getElementById('username');
 const email = document.getElementById('email');

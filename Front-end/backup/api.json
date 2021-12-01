@@ -13,8 +13,8 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     },
-    "host": "https://lab5.live/Quiz/",
-    "basePath": "/API/V1",
+    "host": "https://lab5.live/Quiz",
+    "basePath": "/API/V1/",
     "tags": [{
       "name": "Quiz API",
       "description": "Everything about quiz API",
@@ -29,14 +29,14 @@
     ],
     "paths": {
   
-      "/computing": {
-        "get": {
+      "/login": {
+        "post": {
           "tags": [
-            "Computing Quiz"
+            "Login "
           ],
-          "summary": "get computing questions ",
-          "description": "Questions related to computing with their options and answers",
-          "operationId": "computing",
+          "summary": "Login Functionality",
+          "description": "Log in with existing email and password.",
+          "operationId": "login",
           "produces": [
             "application/json"
           ],
@@ -51,13 +51,188 @@
           }
         }
       },
-      "/personal": {
+      "/register": {
+        "post": {
+          "tags": [
+            "Register"
+          ],
+          "summary": "Register functionality",
+          "description": "Register with username,email and password",
+          "operationId": "register",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/admins/verify": {
+        "post": {
+          "tags": [
+            "Admin Login"
+          ],
+          "summary": "Admin Login",
+          "description": "Not all users have access to admin login",
+          "operationId": "admin",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/admins/stats": {
         "get": {
           "tags": [
-            "Personal Quiz"
+            "Admin Stats"
           ],
-          "summary": "Get personal questions",
-          "description": "Personal questions with their options and answers",
+          "summary": "Admin Stats",
+          "description": "Only admin can see the number of requests made to the endpoint",
+          "operationId": "admin",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/questions": {
+        "get": {
+          "tags": [
+            "Questions"
+          ],
+          "summary": "get all questions of the quiz",
+          "description": "Loads the questions of the quiz in the table.",
+          "operationId": "question",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/addQuestions": {
+        "post": {
+          "tags": [
+            "Add Questions"
+          ],
+          "summary": "Add the questions to the quiz",
+          "description": "Adds the questions to the quiz in the table.",
+          "operationId": "question",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/updateQuestions": {
+        "put": {
+          "tags": [
+            "Edit Questions"
+          ],
+          "summary": "Edit the questions in the quiz",
+          "description": "Edit the questions in the quiz in the table.",
+          "operationId": "question",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      },
+      "/deleteQuestions": {
+        "delete": {
+          "tags": [
+            "Delete Questions by ID"
+          ],
+          "summary": "Delete the questions in the quiz",
+          "description": "Delete the questions from the quiz in the table.",
+          "operationId": "question",
+          "produces": [
+            "application/xml",
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid Question "
+            },
+            "404": {
+              "description": "Question not found"
+            }
+          }
+        }
+      }, 
+      "/deleteAllQuestions": {
+        "delete": {
+          "tags": [
+            "Delete All Questions"
+          ],
+          "summary": "Delete all the questions from the quiz",
+          "description": "Delete the questions from the quiz in the table.",
           "operationId": "question",
           "produces": [
             "application/xml",
